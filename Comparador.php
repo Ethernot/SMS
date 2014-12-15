@@ -1,7 +1,10 @@
+<html>
+<head>
+    <title> Switch management Software </title>
+</head>
+<body>
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: Ricardo
- * Date: 10/12/2014
- * Time: 19:36
- */ 
+echo '<p>compair under construction....</p>';
+?>
+</body>
+</html>

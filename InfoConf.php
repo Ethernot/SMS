@@ -1,7 +1,11 @@
+<html>
+<head>
+    <title> Switch management Software </title>
+</head>
+<body>
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: Ricardo
- * Date: 10/12/2014
- * Time: 19:35
- */ 
+echo '<p>Informations about confugurations under construction....</p>';
+?>
+
+</body>
+</html>
