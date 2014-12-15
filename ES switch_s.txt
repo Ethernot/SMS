@@ -1,0 +1,28 @@
+﻿Nome: sw-4210g.dei.uc.pt
+IP: 10.17.0.6
+Marca: 3Com
+Modelo: 4210G
+Login: monitor
+Password: monitor
+** Acesso por SSH **
+
+Nome: sw-st3.dei.uc.pt
+IP: 10.17.0.7
+Marca: 3Com
+Modelo: SuperStack 3
+Login: monitor
+Password: monitor
+** Acesso por telnet **"
+
+monitor
+monitor
+pro
+ip
+interface
+summary
+all
+(getoutput)
+quit
+quit
+quit
+logout

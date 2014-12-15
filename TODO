@@ -1,0 +1,26 @@
+TODO list:
+
+TAREFAS (digam o que vão fazendo no fb e.g)
+         -> ouvir as duas intervistas;
+         -> configurar XAMPP, whatever
+         -> fazer import do projeto para o vosso inteliji
+         -> push/pull remember
+         -> let the game begin...
+
+-importar configs via php:    ***O PENAS DISSE QUE FAZIA ISTO, PENAS CONFIRMA...****
+        -> guardar numa pasta separada por nome de switch (ou nomeSwitch_mm/aa)
+        -> guardar o ficheiro com o formato nomeSwitc_dd_mm_aa.txt3
+
+interface cliente, programação do Servidor:
+	    -> UI; *** RICARDO FAZ ISTO***
+	    -> página para comparar configuracoes
+	    -> exportar ficheiros
+	    -> parte de mandar mail em caso de avaria, help button e.g
+	    -> adicionem mais cenas....
+
+
+
+PONTOS RELEVANTES:
+APACHE -> vai ter os ficheiros .html e .php, e o backup das configurações diárias .txt;
+LINUX  -> só um precisa de ter, o que tiver o servidor apache que vai fazer os backups;
+XAMPP  -> Apache + MySQL + PHP + Perl... já vem tudo conigurado é mais fácil;
