@@ -6,11 +6,11 @@
 </head>
 <body>
 <h1>New Switch added with sucess</h1>
-<a href="Home.html">return to Home</a>
+<a href="Home.php">return to Home</a>
 <?php
 $brand = $_POST['brand'];
 $model = $_POST['model'];
-$ip = $_POST['ip'];
+$ip = $_POST['IP'];
 $user = $_POST['user'];
 $password = $_POST['password'];
 $newSwitch = $brand . "," . $model . "," . $ip . "," . $user . "," . $password . "\n";

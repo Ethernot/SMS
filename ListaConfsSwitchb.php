@@ -24,7 +24,7 @@
     <form action="ListaConfsSwitcha.php">
         <input type="submit" value="Compare">
     </form>
-    <a href="Home.html">Return to home page</a>
+    <a href="Home.php">Return to home page</a>
 </div>
 </body>
 </html>

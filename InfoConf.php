@@ -5,6 +5,7 @@
 <body>
 <?php
 echo '<p>Informations about confugurations under construction....</p>';
+echo $_POST['selectSwitch'];
 ?>
 
 </body>
