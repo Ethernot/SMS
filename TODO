@@ -19,6 +19,8 @@ interface cliente, programação do Servidor:
 	    -> adicionem mais cenas....
 -encriptar e verificar passwords->feito(batanete)
 
+        -> molhorar os documentos TODOS (ver critica do prof)
+
 
 PONTOS RELEVANTES:
 APACHE -> vai ter os ficheiros .html e .php, e o backup das configurações diárias .txt;
