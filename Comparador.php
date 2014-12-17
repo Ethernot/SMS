@@ -8,17 +8,13 @@
 <div style="width: 1500px;">
     <div style="width: 750px; float: left;">
         <?php
-        //        $switchName = $_POST['name'];
-        //        $filename1 = $_POST['filename1'];
-        //        $filename2 = $_POST['filename2'];
-
-        $switchName = "teste";
-        $filename1 = "17-12-2014";
-        $filename2 = "18-12-2014";
+        $switchName = $_POST['swichSelected'];
+        $filename1 = $_POST['conf1'];
+        $filename2 = $_POST['conf2'];
 
         echo '<h1>CONFIGURATION of switch ' . $switchName . ' on day' . $filename1 . '</h1>';
-        $config1 = file_get_contents("configs/" . $switchName . "/" . $filename1 . ".txt", true);
-        $config2 = file_get_contents("configs/" . $switchName . "/" . $filename2 . ".txt", true);;
+        $config1 = file_get_contents("configs/" . $switchName . "/" . $filename1, true);
+        $config2 = file_get_contents("configs/" . $switchName . "/" . $filename2, true);;
         for ($i = 0; $i < strlen($config1); $i++) {
             if ($i >= strlen($config2)) {
                 echo '<font color=#ff0000 size="4">' . $config1[$i] . '</font>';
@@ -44,6 +40,19 @@
         }
         ?>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <button onclick="goBack()">Go Back</button>
+
+    <script>
+        function goBack() {
+            window.history.back()
+        }
+    </script>
 </div>
 </body>
 </html>
