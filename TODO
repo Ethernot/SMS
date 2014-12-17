@@ -17,6 +17,8 @@ interface cliente, programação do Servidor:
 	    -> exportar ficheiros
 	    -> parte de mandar mail em caso de avaria, help button e.g
 	    -> adicionem mais cenas....
+-encriptar e verificar passwords->feito(batanete)
+
         -> molhorar os documentos TODOS (ver critica do prof)
 
 
