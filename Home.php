@@ -36,50 +36,6 @@
 </form>
 
 
-<?php
-function deleteSwitch($name)
-{
-    if (tryRemove($name)) {
-        echo "Switch deleted succefly";
-    } else {
-        echo "Error Deleting switch";
-    }
-}
-
-function tryRemove($name)
-{
-    global $switchesList;
-    $file = fopen('Switch/SwitchAcessList.txt', "w");
-    $final = "";
-    $deleted = "";
-    foreach ($switchesList as $a) {
-        echo $a;
-        if (explode(',', $a)[0] == $name) {
-            $deleted = $a;
-        } else {
-            $final += $a;
-        }
-    }
-
-    fwrite($file, $final);
-    fclose($file);
-
-    $file = fopen('Switch/DeletedSwitchesList.txt', "a");
-    fwrite($file, $deleted);
-    fclose($file);
-}
-
-
-?>
-
-<script>
-    function deleteSwitch() {
-        var aux = document.switches.selectSwitch.value;
-        alert(aux);
-        alert("<?php deleteSwitch(aux); ?>");
-        window.location.reload();
-    }
-</script>
 
 
 <br>
