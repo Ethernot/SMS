@@ -8,7 +8,7 @@
 $fileToOpen = $_POST['selectedConf'];
 $swichSelected = $_POST['swichSelected'];
 
-$file = file_get_contents("Switch/" . $fileToOpen, true);
+$file = file_get_contents('configs/' . $swichSelected . '/' . $fileToOpen, true);
 echo $file;
 ?>
 <br><br>

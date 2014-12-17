@@ -45,7 +45,7 @@ echo "<font size='5'> USER:" . $user . '</font> <br> <br>';
 <form name="configurations" action="Comparador.php" method="post">
     <select multiple="true" size="10" name="conf2" style="width:350px" required="true">
         <?php
-        if ($handle = opendir('Switch')) {
+        if ($handle = opendir('configs/' . $name)) {
             while (false !== ($entry = readdir($handle))) {
                 if ($entry != "." && $entry != "..") {
                     if ($entry != $fileToOpen) {
