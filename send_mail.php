@@ -31,5 +31,5 @@ require_once "Mail.php";
 	}
 	}
 	
-	envia_mail("bataover9000@gmail.com","bia-6@hotmail.com","ola","Tudo bem?","smtp.gmail.com","587","bataover9000@gmail.com","consolaPS3")
+	envia_mail("...@gmail.com","...@hotmail.com","ola","Tudo bem?","smtp.gmail.com","587","...@gmail.com","***")
 ?>
