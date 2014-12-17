@@ -5,7 +5,9 @@
 <body>
 <?php
 
-$name = $_POST['selectSwitch'];
+$fileToOpen = $_POST['fileToOpen'];
+$name = $_POST['swichSelected'];
+
 $brand = "";
 $model = "";
 $ip = "";
@@ -40,21 +42,22 @@ echo "<font size='5'> USER:" . $user . '</font> <br> <br>';
 
 <h2>Configurations: </h2>
 
-<form name="configurations" action="InfoConf.php" method="post">
+<form name="configurations" action="Comparador.php" method="post">
     <select multiple="true" size="10" name="selectedConf" style="width:350px" required="true">
         <?php
         if ($handle = opendir('Switch')) {
             while (false !== ($entry = readdir($handle))) {
                 if ($entry != "." && $entry != "..") {
-                    echo '<option value=' . $entry . '>' . $entry . '</option>';
+                    if ($entry != $fileToOpen) {
+                        echo '<option value=' . $entry . '>' . $entry . '</option>';
+                    }
                 }
             }
             closedir($handle);
         }
         ?>
     </select>
-    <input type="hidden" name="swichSelected" value=<?php echo $name; ?>>
-    <input type="submit" value="Check Configuration">
+    <input type="submit" value="Compare">
 </form>
 
 
