@@ -21,6 +21,6 @@ fwrite($myfile, $newSwitch);
 fclose($myfile);
 ?>
 <h1>New Switch added with sucess</h1>
-<a href="Home.html">return to Home</a>
+<a href="Home.php">return to Home</a>
 </body>
 </html>
