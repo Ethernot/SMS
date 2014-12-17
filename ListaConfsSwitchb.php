@@ -12,7 +12,7 @@
     echo '<p></p>';
     ?>
 
-    <form action="InfoConf.php">
+    <form action="Configurations.php">
         <input type="radio" name="sex" value="day 1" checked>Day 1
         <br>
         <input type="radio" name="sex" value="day 2">Day 2

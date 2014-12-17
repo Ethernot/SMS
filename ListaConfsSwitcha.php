@@ -11,7 +11,7 @@
     echo '<p></p>';
     ?>
 
-    <form action="InfoConf.php">
+    <form action="Configurations.php">
         <input type="radio" name="d1" value="day 1" checked>Day 1
         <br>
         <input type="radio" name="d2" value="day 2">Day 2

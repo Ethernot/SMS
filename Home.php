@@ -22,7 +22,7 @@
 
 </div>
 
-<form name="switches" action="InfoConf.php" method="post">
+<form name="switches" action="Configurations.php" method="post">
     <select multiple="true" size="10" name="selectSwitch" style="width:350px" required="true">
         <?php
         foreach ($switchesNameList as $a) {
@@ -31,7 +31,7 @@
         ?>
     </select>
     <br>
-    <input type="submit" value="Check configuration">
+    <input type="submit" value="Check Switch configurations">
     <br>
 </form>
 
