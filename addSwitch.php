@@ -12,7 +12,8 @@ $model = $_POST['model'];
 $ip = $_POST['IP'];
 $user = $_POST['user'];
 $password = $_POST['password'];
-$newSwitch = $name . "," . $brand . "," . $model . "," . $ip . "," . $user . "," . $password . "\n";
+$access = $_POST['acess'];
+$newSwitch = $name . "," . $brand . "," . $model . "," . $ip . "," . $user . "," . $password . "," . $access . "\n";
 if (!file_exists('Switch/SwitchAcessList.txt')) {
     mkdir('Switch', 0777, true);
 }
