@@ -6,12 +6,13 @@
 </head>
 <body>
 <?php
+$name = $_POST['name'];
 $brand = $_POST['brand'];
 $model = $_POST['model'];
 $ip = $_POST['IP'];
 $user = $_POST['user'];
 $password = $_POST['password'];
-$newSwitch = $brand . "," . $model . "," . $ip . "," . $user . "," . $password . "\n";
+$newSwitch = $name . "," . $brand . "," . $model . "," . $ip . "," . $user . "," . $password . "\n";
 if (!file_exists('Switch/SwitchAcessList.txt')) {
     mkdir('Switch', 0777, true);
 }
