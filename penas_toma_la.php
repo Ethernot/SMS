@@ -1,45 +1,34 @@
-
 <?php
-    #returns the array of files on the given directory
-    function listDirectory($dir){
 
-        $l=scandir($dir);
+    #saves a password and its hash value on the passwords file(one pass per line).
+    function savepassword($pass){
+        #NOTA:FACHAVOR DE MUDAR ESTA MERDA PARA O NOME CORRETO FICHEIRO QUE TAS A USAR CARALHO
+        $fp=fopen("ficheiro.bin","ab");
+        $line=$pass." ".sha1($pass)."\n";
 
-        return $l;
+        fwrite($fp,$line);
+        fclose($fp);
 
     }
 
-    #checks if given log already exists on directory
-    function logExists($logname,$dir)
-    {
-        $i = 0;
-        $l = listDirectory($dir);
+    /*reads the pairs password/encrypted password from the passwords file and returns
+     * a bidimensional array with the pairs.
+      */
+    function readpasswords(){
 
-        while ($i < count($l)) {
-            if($l[$i]===$logname)
-                return True;
+        $res=array();
 
-            $i = $i + 1;
+        #NOTA:FACHAVOR DE MUDAR ESTA MERDA PARA O NOME CORRETO FICHEIRO QUE TAS A USAR CARALHO
+        $fp=fopen("ficheiro.bin","rb");
+
+        while(($line=fgets($fp))!==false){
+            $aux=explode(" ",$line);
+
+            array_push($res,$aux);
         }
-        return False;
-    }
-
-    #check if logs for a certain switch are updated and updates if they are not
-    function updateLogs($switchname)
-    {
-
-        #obtains name that log is meant to have
-        $logname=TUAFUNCAOPARAOBTERNOMEDOLOG();
-        
-        /*verifies if log has already been created.if it hasn't,it obtains the switche's configuration
-        and then creates this day's log.*/
-        if(!logExists($switchname,$logname)){
-            TUAFUNCAOPARACRIARLOG();
-        }
-
-
+        return $res;
+        fclose($fp);
     }
     
-
-
+    
 ?>
