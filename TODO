@@ -9,7 +9,7 @@ TAREFAS (digam o que vão fazendo no fb e.g)
 
 -importar configs via php:    ***O PENAS DISSE QUE FAZIA ISTO, PENAS CONFIRMA...****
         -> guardar numa pasta separada por nome de switch (ou nomeSwitch_mm/aa)
-        -> guardar o ficheiro com o formato nomeSwitc_dd_mm_aa.txt3
+        -> guardar o ficheiro com o formato nomeSwitc_dd_mm_aa.txt
 
 interface cliente, programação do Servidor:
 	    -> UI; *** RICARDO FAZ ISTO***
