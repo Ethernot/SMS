@@ -43,7 +43,7 @@ echo "<font size='5'> USER:" . $user . '</font> <br> <br>';
 <h2>Configurations: </h2>
 
 <form name="configurations" action="Comparador.php" method="post">
-    <select multiple="true" size="10" name="selectedConf" style="width:350px" required="true">
+    <select multiple="true" size="10" name="conf2" style="width:350px" required="true">
         <?php
         if ($handle = opendir('Switch')) {
             while (false !== ($entry = readdir($handle))) {
@@ -57,6 +57,9 @@ echo "<font size='5'> USER:" . $user . '</font> <br> <br>';
         }
         ?>
     </select>
+    <input type="hidden" name="swichSelected" value=<?php echo $name; ?>>
+    <input type="hidden" name="conf1" value=<?php echo $fileToOpen; ?>>
+
     <input type="submit" value="Compare">
 </form>
 
