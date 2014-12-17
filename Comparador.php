@@ -25,6 +25,9 @@
             }
         }
         ?>
+        <br>
+        <button> A</button>
+        <br>
     </div>
     <div style="width: 750px; float: right;">
         <?php
@@ -39,6 +42,9 @@
             }
         }
         ?>
+        <br>
+        <button> B</button>
+        <br>
     </div>
     <br>
     <br>
