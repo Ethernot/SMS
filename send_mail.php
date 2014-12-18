@@ -1,16 +1,6 @@
 <?php
 require_once "Mail.php";
 	function envia_mail($from,$to,$subject,$body,$host,$port,$username,$password){
-		#$from = "...@gmail.com";
-		#$to = "...@gmail.com";
-		#$subject = "Hi!";
-		#$body = "Hi,\n\nHow are you?";
-
-		#$host = "smtp.gmail.com";
-		#$port = "587";
-		#$username = "...@gmail.com";
-		#$password = "...";
-
 		$headers = array ('From' => $from,
 		  'To' => $to,
 		  'Subject' => $subject);

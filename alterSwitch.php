@@ -42,6 +42,13 @@ $type = explode(",", $conf)[6];
     <input type="hidden" name="oldName" value=<?php echo $name ?>>
     <input type="submit" value="Save changes"><br><br>
 </form>
+<br>
+<button onclick="goBack()">Go Back</button>
 
+<script>
+    function goBack() {
+        window.history.back()
+    }
+</script>
 </body>
 </html>

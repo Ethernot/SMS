@@ -18,5 +18,13 @@ echo $file;
     <input type="hidden" name="swichSelected" value=<?php echo $swichSelected; ?>>
     <input type="submit" value="Compare">
 </form>
+<br>
+<button onclick="goBack()">Go Back</button>
+
+<script>
+    function goBack() {
+        window.history.back()
+    }
+</script>
 </body>
 </html>

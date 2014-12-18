@@ -73,7 +73,18 @@ echo "<font size='4'> ACCESSED BY:" . $type . '</font> <br> <br>';
     <input type="submit" value="Get actual configuration now!">
 </form>
 
+<br><br><br>
+<a href="showHistory.php">
+    <button>Check logs</button>
+</a>
+<br>
+<button onclick="goBack()">Go Back</button>
 
+<script>
+    function goBack() {
+        window.history.back()
+    }
+</script>
 </body>
 </html>
 

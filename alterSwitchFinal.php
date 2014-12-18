@@ -31,7 +31,6 @@ $final = "";
 foreach ($switchesList as $s) {
     if (explode(",", $s)[0] == $oldName) {
         $modified = $s;
-        $modified .= "\n";
     } else {
         $final .= $s;
     }
@@ -41,8 +40,17 @@ $myfile = fopen("Switch/SwitchAcessList.txt", "w") or die("Unable to open file!"
 fwrite($myfile, $final);
 fclose($myfile);
 
+$finalAlter = $modified . " - " . $final;
+
 $myfile = fopen("Switch/ChangedSwitchList.txt", "a") or die("Unable to open file!");
-fwrite($myfile, $modified);
+fwrite($myfile, $finalAlter);
+fclose($myfile);
+if (!file_exists("logs")) {
+    mkdir('logs', 0777, true);
+}
+$d = date("Y-m-d") . '_' . date("h-i-sa");
+$myfile = fopen("logs/" . $d . "_altered_switch_info_" . $name . ".txt", "a") or die("Unable to open file!");
+fwrite($myfile, "altered switch " . $name);
 fclose($myfile);
 ?>
 <h1>Switch altered with sucess</h1>

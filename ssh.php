@@ -17,9 +17,16 @@ function sshswitch($ip, $username, $password, $switchname, $flag)
         $myfile = fopen("configs/" . $file, "w") or die("Unable to open file!");
         fwrite($myfile, $result);
         fclose($myfile);
+        if (!file_exists("logs")) {
+            mkdir('logs', 0777, true);
+        }
+        $d = date("Y-m-d") . '_' . date("h-i-sa");
+        $myfile = fopen("logs/" . $d . "backup_switch_" . $switchname . ".txt", "a") or die("Unable to open file!");
+        fwrite($myfile, "backup switch " . $switchname);
+        fclose($myfile);
+        echo "<br>Switch com o nome" . $switchname . " obtido com sucesso via ssh<br>";
     } else {
-        echo "erro";
-        //mandar mail
+        echo "<br>Erro no switch com o nome" . $switchname . " via ssh<br>";
     }
 }
 

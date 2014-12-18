@@ -32,14 +32,21 @@ foreach ($switchesList as $s) {
     }
 }
 
-if ($type == 'ssh') {
+if ($type[0] == 's') {
     sshswitch($ip, $user, $password, $switchName, 1);
 } else {
     telnetswitch($ip, $user, $password, $switchName, 1);
 }
 
 ?>
+<br>
+<button onclick="goBack()">Go Back</button>
 
+<script>
+    function goBack() {
+        window.history.back()
+    }
+</script>
 </body>
 </html>
 

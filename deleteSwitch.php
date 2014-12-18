@@ -39,6 +39,14 @@ $file = fopen('Switch/DeletedSwitchesList.txt', "a");
 fwrite($file, $deleted);
 fclose($file);
 
+if (!file_exists("logs")) {
+    mkdir('logs', 0777, true);
+}
+$d = date("Y-m-d") . '_' . date("h-i-sa");
+$myfile = fopen("logs/" . $d . "_deleted_swich_" . $name . ".txt", "a") or die("Unable to open file!");
+fwrite($myfile, "deleted switch " . $name);
+fclose($myfile);
+
 ?>
 <a href="Home.php">Return to homepage</a>
 </body>

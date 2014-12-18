@@ -22,6 +22,13 @@ if (!file_exists('Switch/SwitchAcessList.txt')) {
 $myfile = fopen("Switch/SwitchAcessList.txt", "a") or die("Unable to open file!");
 fwrite($myfile, $newSwitch);
 fclose($myfile);
+if (!file_exists("logs")) {
+    mkdir('logs', 0777, true);
+}
+$d = date("Y-m-d") . '_' . date("h-i-sa");
+$myfile = fopen("logs/" . $d . "_added_swich_" . $name . ".txt", "a") or die("Unable to open file!");
+fwrite($myfile, "added switch " . $name);
+fclose($myfile);
 ?>
 <h1>New Switch added with sucess</h1>
 <a href="Home.php">return to Home</a>

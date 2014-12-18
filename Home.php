@@ -49,9 +49,14 @@ if (count($switchesNameList) > 0) {
 
 
 
-<br>
+<br><br>
 <a href="NewSwitch.html">
     <button>Add new switch</button>
+</a>
+
+<br><br><br>
+<a href="showLogs.php">
+    <button>Check logs</button>
 </a>
 
 </body>
