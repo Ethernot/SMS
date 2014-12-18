@@ -12,10 +12,12 @@ $ip = "";
 $user = "";
 $password = "";
 $type = "";
+$final = "";
 $file = file_get_contents('Switch/SwitchAcessList.txt', true);
 for ($i = 0; $i < count(explode("\n", $file)); $i++) {
     //alterar cenas
     if (explode(",", explode("\n", $file)[$i])[0] == $name) {
+        $final = explode("\n", $file)[$i];
         $brand = explode(",", explode("\n", $file)[$i])[1];
         $model = explode(",", explode("\n", $file)[$i])[2];
         $ip = explode(",", explode("\n", $file)[$i])[3];
@@ -34,6 +36,11 @@ echo "<font size='4'> IP:" . $ip . '</font> <br> <br>';
 echo "<font size='4'> USER:" . $user . '</font> <br> <br>';
 echo "<font size='4'> ACCESSED BY:" . $type . '</font> <br> <br>';
 ?>
+
+<form action="alterSwitch.php" method="post">
+    <input type="hidden" name="alter" value=<?php echo $final; ?>>
+    <input type="submit" value="Alter this switch">
+</form>
 
 <form action="deleteSwitch.php" method="post">
     <input type="hidden" name="name" value=<?php echo $name; ?>>
@@ -59,6 +66,11 @@ echo "<font size='4'> ACCESSED BY:" . $type . '</font> <br> <br>';
     </select>
     <input type="hidden" name="swichSelected" value=<?php echo $name; ?>>
     <input type="submit" value="Check Configuration">
+</form>
+
+<form action="getConfigurationNow.php" method="post">
+    <input type="hidden" name="switchName" value=<?php echo $name; ?>>
+    <input type="submit" value="Get actual configuration now!">
 </form>
 
 

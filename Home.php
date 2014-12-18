@@ -26,7 +26,10 @@
     <select multiple="true" size="10" name="selectSwitch" style="width:350px" required="true">
         <?php
         foreach ($switchesNameList as $a) {
-            echo '<option value=' . $a . '>' . $a . '</option>';
+            if (strlen($a) > 0) {
+                echo '<option value=' . $a . '>' . $a . '</option>';
+            }
+
         }
         ?>
     </select>

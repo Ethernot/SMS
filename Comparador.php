@@ -26,7 +26,9 @@
         }
         ?>
         <br>
-        <button> A</button>
+        <a href=<?php echo "configs/" . $switchName . "/" . $filename1; ?>>
+            <button> Download this</button>
+        </a>
         <br>
     </div>
     <div style="width: 750px; float: right;">
@@ -43,7 +45,9 @@
         }
         ?>
         <br>
-        <button> B</button>
+        <a href=<?php echo "configs/" . $switchName . "/" . $filename2; ?>>
+            <button> Download this</button>
+        </a>
         <br>
     </div>
     <br>
