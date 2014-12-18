@@ -20,8 +20,9 @@ foreach ($switchesList as $a) {
 
     if (explode(',', $a)[0] == $name) {
         $deleted = $a;
+        $deleted .= "\n";
     } else {
-        $a .= "\n";
+//        $a .= "\n";
         $final .= $a;
     }
 }

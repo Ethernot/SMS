@@ -13,9 +13,11 @@ $ip = $_POST['IP'];
 $user = $_POST['user'];
 $password = $_POST['password'];
 $access = $_POST['acess'];
-$newSwitch = $name . "," . $brand . "," . $model . "," . $ip . "," . $user . "," . $password . "," . $access . "\n";
+$newSwitch = $name . "," . $brand . "," . $model . "," . $ip . "," . $user . "," . $password . "," . $access;
 if (!file_exists('Switch/SwitchAcessList.txt')) {
     mkdir('Switch', 0777, true);
+} else {
+    $newSwitch = "\n" . $newSwitch;
 }
 $myfile = fopen("Switch/SwitchAcessList.txt", "a") or die("Unable to open file!");
 fwrite($myfile, $newSwitch);

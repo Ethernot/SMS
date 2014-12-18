@@ -27,12 +27,13 @@ $type = explode(",", $conf)[6];
     IP of the switch: <input type="text" name="IP" required="true" value=<?php echo $ip; ?>><br><br>
     Accessed by:
     <?php
+
     if ($type == 'ssh') {
         echo '<br> <input type="radio" name="acess" value="ssh" checked="true"> SSH ';
-        echo '<br> <input type="radio" name="acess" value="ssh" checked="false"> Telnet <br>';
+        echo '<br> <input type="radio" name="acess" value="telnet" > Telnet <br>';
     } else {
-        echo '<br> <input type="radio" name="acess" value="ssh" checked="false"> SSH ';
-        echo '<br> <input type="radio" name="acess" value="ssh" checked="true"> Telnet <br>';
+        echo '<br> <input type="radio" name="acess" value="ssh"> SSH ';
+        echo '<br> <input type="radio" name="acess" value="telnet" checked="true"> Telnet <br>';
     }
     ?>
     User credencial to acess the switch: <input type="text" name="user" required="true"

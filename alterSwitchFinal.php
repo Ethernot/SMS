@@ -31,6 +31,7 @@ $final = "";
 foreach ($switchesList as $s) {
     if (explode(",", $s)[0] == $oldName) {
         $modified = $s;
+        $modified .= "\n";
     } else {
         $final .= $s;
     }

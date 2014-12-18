@@ -14,7 +14,7 @@ $switchName = $_POST['switchName'];
 $ip = "";
 $user = "";
 $password = "";
-$access = "";
+$type = "";
 
 $file = file_get_contents('Switch/SwitchAcessList.txt', true);
 $switchesList = array();
@@ -24,10 +24,11 @@ for ($i = 0; $i < count(explode("\n", $file)); $i++) {
 
 foreach ($switchesList as $s) {
     if (explode(",", $s)[0] == $switchName) {
-        $ip = $s[3];
-        $user = $s[4];
-        $password = $s[5];
-        $type = $s[6];
+        $ip = explode(",", $s)[3];
+        $user = explode(",", $s)[4];
+        $password = explode(",", $s)[5];
+        $type = explode(",", $s)[6];
+        break;
     }
 }
 
