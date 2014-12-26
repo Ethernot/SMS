@@ -30,9 +30,9 @@ function telnetswitch($ip, $username, $password, $switchname, $flag)
         $myfile = fopen("logs/" . $d . "backup_switch_" . $switchname . ".txt", "a") or die("Unable to open file!");
         fwrite($myfile, "backup switch " . $switchname);
         fclose($myfile);
-        echo "<br>Switch com o nome" . $switchname . " obtido com sucesso via telnet<br>";
+        echo "<br>Switch com o nome " . $switchname . " obtido com sucesso via telnet<br>";
     } else {
-        echo "<br>Erro no switch com o nome" . $switchname . " via telnet<br>";
+        echo "<br>Erro no switch com o nome " . $switchname . " via telnet<br>";
     }
 }
 

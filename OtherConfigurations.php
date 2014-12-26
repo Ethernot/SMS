@@ -28,6 +28,7 @@ for ($i = 0; $i < count(explode("\n", $file)); $i++) {
     }
 }
 
+
 echo "<font size='6'>Switch Datails: </font> <br> <br> <br>";
 echo "<font size='4'> NAME:  " . $name . '</font> <br> <br>';
 echo "<font size='4'> BRAND: " . $brand . '</font> <br> <br>';
@@ -67,7 +68,14 @@ echo "<font size='4'> ACCESSED BY:" . $type . '</font> <br> <br>';
     <input type="submit" value="Compare">
 </form>
 
+<br>
+<button onclick="goBack()">Go Back</button>
 
+<script>
+    function goBack() {
+        window.history.back()
+    }
+</script>
 </body>
 </html>
 

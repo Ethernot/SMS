@@ -42,6 +42,11 @@ echo "<font size='4'> ACCESSED BY:" . $type . '</font> <br> <br>';
     <input type="submit" value="Alter this switch">
 </form>
 
+<form action="showHistory.php" method="post">
+    <input type="hidden" name="name" value=<?php echo $name; ?>>
+    <input type="submit" value="check switch detail history">
+</form>
+
 <form action="deleteSwitch.php" method="post">
     <input type="hidden" name="name" value=<?php echo $name; ?>>
     <input type="submit" value="Delete this switch">
@@ -54,10 +59,12 @@ echo "<font size='4'> ACCESSED BY:" . $type . '</font> <br> <br>';
 <form name="configurations" action="InfoConf.php" method="post">
     <select multiple="true" size="10" name="selectedConf" style="width:350px" required="true">
         <?php
+        $i = 0;
         if ($handle = opendir('configs/' . $name)) {
             while (false !== ($entry = readdir($handle))) {
                 if ($entry != "." && $entry != "..") {
                     echo '<option value=' . $entry . '>' . $entry . '</option>';
+                    $i++;
                 }
             }
             closedir($handle);
@@ -65,6 +72,7 @@ echo "<font size='4'> ACCESSED BY:" . $type . '</font> <br> <br>';
         ?>
     </select>
     <input type="hidden" name="swichSelected" value=<?php echo $name; ?>>
+    <input type="hidden" name="noconfig" value=<?php echo $i; ?>>
     <input type="submit" value="Check Configuration">
 </form>
 
@@ -74,9 +82,7 @@ echo "<font size='4'> ACCESSED BY:" . $type . '</font> <br> <br>';
 </form>
 
 <br><br><br>
-<a href="showHistory.php">
-    <button>Check logs</button>
-</a>
+
 <br>
 <button onclick="goBack()">Go Back</button>
 

@@ -20,6 +20,7 @@ if (!file_exists('Switch/SwitchAcessList.txt')) {
     $newSwitch = "\n" . $newSwitch;
 }
 $myfile = fopen("Switch/SwitchAcessList.txt", "a") or die("Unable to open file!");
+
 fwrite($myfile, $newSwitch);
 fclose($myfile);
 if (!file_exists("logs")) {

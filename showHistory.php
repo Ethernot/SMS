@@ -6,18 +6,18 @@
 </head>
 <body>
 <?php
-
-if (file_exists('Switch/ChangedSwitchList.txt')) {
-    $file = file_get_contents('Switch/ChangedSwitchList.txt', true);
-    for ($i = 0; $i < count(explode("\n", $file)); $i++) {
-        if (strlen(explode("\n", $file)[$i]) > 0) {
-            array_push($switchesList, explode("\n", $file)[$i]);
-            array_push($switchesNameList, explode(",", explode("\n", $file)[$i])[0]);
-        }
+$name = $_POST['name'];
+if (file_exists('configs/history/' . $name . '/confighistory.txt')) {
+    $file = fopen('configs/history/' . $name . '/confighistory.txt', 'r') or die("Unable to open file!");
+    echo "<h1>Detail history of " . $name . ": </h1>";
+    while (!feof($file)) {
+        echo fgets($file) . "<br>";
     }
+    fclose($file);
+} else {
+    echo "<h3>No History</h3>";
 }
 ?>
-
 <br>
 <button onclick="goBack()">Go Back</button>
 

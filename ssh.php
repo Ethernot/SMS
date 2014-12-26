@@ -15,6 +15,7 @@ function sshswitch($ip, $username, $password, $switchname, $flag)
         else
             $file = getLogFileNow($switchname);
         $myfile = fopen("configs/" . $file, "w") or die("Unable to open file!");
+
         fwrite($myfile, $result);
         fclose($myfile);
         if (!file_exists("logs")) {
@@ -24,9 +25,9 @@ function sshswitch($ip, $username, $password, $switchname, $flag)
         $myfile = fopen("logs/" . $d . "backup_switch_" . $switchname . ".txt", "a") or die("Unable to open file!");
         fwrite($myfile, "backup switch " . $switchname);
         fclose($myfile);
-        echo "<br>Switch com o nome" . $switchname . " obtido com sucesso via ssh<br>";
+        echo "<br>Switch com o nome " . $switchname . " obtido com sucesso via ssh<br>";
     } else {
-        echo "<br>Erro no switch com o nome" . $switchname . " via ssh<br>";
+        echo "<br>Erro no switch com o nome " . $switchname . " via ssh<br>";
     }
 }
 
